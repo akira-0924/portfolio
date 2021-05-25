@@ -3,12 +3,14 @@
     <h2>AKIRA MIZUSHIMA's PORTFOLIO</h2>
   </div>
   <div id="nav">
-    <router-link to="/Profile" class="selection"><i class="fas fa-user select-icon"></i>Profile</router-link>
-    <router-link to="/Product" class="selection"><i class="fas fa-broom select-icon"></i>Product</router-link>
-    <router-link to="/experience" class="selection"><i class="fas fa-clock select-icon"></i>Experience</router-link>
-    <router-link to="/about" class="selection"><i class="fas fa-clone select-icon"></i>About</router-link>
+      <router-link to="/" class="selection"><i class="fas fa-user select-icon"></i>Profile</router-link>
+      <router-link to="/Product" class="selection"><i class="fas fa-broom select-icon"></i>Product</router-link>
+      <router-link to="/experience" class="selection"><i class="fas fa-clock select-icon"></i>Experience</router-link>
+      <router-link to="/about" class="selection"><i class="fas fa-clone select-icon"></i>About</router-link>
   </div>
+  <transition name="loadfade">
   <router-view/>
+  </transition>
   <footer1 msg="水島アキラ"/>
 </template>
 <script>
@@ -29,6 +31,7 @@ body{
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -48,6 +51,7 @@ body{
     font-size:30px;
     text-decoration: none;
     text-shadow: 2px 2px 1px rgb(167, 167, 167);
+    letter-spacing: 4px;
 
     &.router-link-exact-active {
       color: #ff991c;
@@ -65,6 +69,7 @@ body{
     background-size: cover;
     color:rgb(237, 237, 237);
     font-size:30px;
+    letter-spacing: 6px;
     text-shadow: 4px 4px 2px rgb(65, 65, 65);
     position:relative;
     z-index:1;
@@ -73,6 +78,7 @@ body{
 
   h2{
     float: left;
+    padding:10px 20px;
   }
   }
 .topback::before{
@@ -85,7 +91,19 @@ content:"";
   left:0;
   background-color: rgba(0, 0, 0,0.3);
 }
-
+.loadfade-leave-active{
+  transition: all ease .6s;
+}
+.loadfade-enter-active {
+    transition: all ease 1s;
+    opacity: 0;
+}
+.loadfade-enter-to {
+  opacity: 1;
+}
+.loadfade-leave-to {
+    opacity: 0;
+}
 @media screen and (max-width:600px) {
   #nav{
       .selection{
