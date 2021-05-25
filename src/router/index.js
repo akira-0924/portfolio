@@ -40,10 +40,19 @@ const routes = [{
     import('../views/Proitem2.vue')
 }
 ]
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition
+  } else {
+    return { top: 0 }
+  }
+}
 
 const Router = createRouter({
   history: createWebHistory(),
-  routes
+  mode: 'history',
+  routes,
+  scrollBehavior
 })
 
 export default Router
