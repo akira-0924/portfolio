@@ -52,6 +52,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -103,6 +104,7 @@ export default {
   margin:30px 80px;
   font-size:40px;
   padding-top:60px;
+  letter-spacing: 4px;
 }
 .ex-items img{
   border-radius: 10px;
@@ -181,6 +183,18 @@ flex-wrap: wrap;
 .fa-angle-right{
 margin-left:16px;
 }
+.fadeIn {
+transition: 1s;
+opacity: 0;
+transform:translate3d(0,100px,0);
+padding-bottom:100px;
+}
+
+.fadeIn.animated {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+
 @media screen and (max-width:600px) {
   .ex-items-dis{
   width:80%;
@@ -188,6 +202,39 @@ margin-left:16px;
  .skills{
   width:90%;
 justify-content:center;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .Experience{
+  background-attachment:unset;
+  }
+  .ex-items img{
+    width:340px;
+    height: 260px;
+    margin:20px auto;
+  }
+  .ex-items-dis{
+    width:90%;
+  }
+  .ex-title{
+  margin:30px auto;
+  font-size:40px;
+  padding-top:60px;
+}
+  .skills-title{
+  width:80%;
+  margin:30px auto 0px;
+  text-align: left;
+  }
+  .pro-list{
+  font-size:30px;
+  margin:4px 10px;
+  padding:4px 10px;
+  min-width:100px;
+  }
+  .skills{
+  margin-right: 40px;
   }
 }
 </style>
