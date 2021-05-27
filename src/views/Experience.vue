@@ -3,7 +3,9 @@
     <h1 class="ex-title">University</h1>
     <div class="ex-container">
       <div class="ex-items">
+        <scrollfade>
         <img :src="eximguni" width="420" height="310">
+        </scrollfade>
       </div>
       <div class="ex-items-dis">
         <h2>日本大学/理工学部/電気工学科</h2>
@@ -16,34 +18,44 @@
     <h2 class="skills-title"><i class="fas fa-caret-right"></i>フロントエンド</h2>
       <div class="skills">
         <ul>
+          <scrollfade>
           <li class="pro-list mou" v-for="skill in skills1" v-bind:key="skill.id">{{ skill.skill }}</li>
           <li class="pro-list mada">React<span>(学修中)</span></li>
+          </scrollfade>
         </ul>
       </div>
       <h2 class="skills-title"><i class="fas fa-caret-right"></i>バックエンド</h2>
       <div class="skills">
         <ul>
+          <scrollfade>
           <li class="pro-list mou">Rails</li>
+          </scrollfade>
         </ul>
       </div>
       <h2 class="skills-title"><i class="fas fa-caret-right"></i>インフラ・サーバー</h2>
       <div class="skills">
         <ul>
+          <scrollfade>
           <li class="pro-list mada">AWS<span>(学修予定)</span></li>
           <li class="pro-list mada">Docker<span>(学修中)</span></li>
+          </scrollfade>
         </ul>
       </div>
       <h2 class="skills-title"><i class="fas fa-caret-right"></i>データベース</h2>
       <div class="skills">
         <ul>
+          <scrollfade>
           <li class="pro-list mou">SQLite3</li>
           <li class="pro-list mada">MySQL<span>(学修予定)</span></li>
+          </scrollfade>
         </ul>
       </div>
       <h2 class="skills-title"><i class="fas fa-caret-right"></i>その他</h2>
       <div class="skills">
         <ul>
+          <scrollfade>
           <li class="pro-list mou" v-for="skill in skills2" v-bind:key="skill.id">{{ skill.skill }}</li>
+          </scrollfade>
         </ul>
       </div>
         <router-link to="/Product">
@@ -52,9 +64,13 @@
   </div>
 </template>
 <script>
+import scrollfade from '../components/FadeInComponent.vue'
 
 export default {
   name: 'HelloWorld',
+  components: {
+    scrollfade
+  },
   data () {
     return {
       skills1: [
@@ -106,9 +122,10 @@ export default {
   padding-top:60px;
   letter-spacing: 4px;
 }
+
 .ex-items img{
   border-radius: 10px;
-  margin:20px 40px;
+  margin:20px 40px  ;
 }
 .ex-container{
   display: flex;
