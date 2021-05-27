@@ -33,16 +33,31 @@
         <router-link to="/Product-item2"><h3>ポートフォリオ</h3></router-link>
       </div>
       <div class="pro-item">
-        <div class="imgchange">
-          <img :src="proline" width="400" height="300">
-        </div>
-        <h3>LINE BOT</h3>
+        <router-link to="/Product-item3">
+          <div class="imgchange">
+            <transition name="imgFade">
+              <div v-if="img3if" class="imgif">
+                <img v-on:mouseover="img3hover" v-on:mouseleave="img3rehover" :src="proline" width="400" height="300">
+              </div>
+              <div v-else class="imgif">
+                <img v-on:mouseover="img3hover" v-on:mouseleave="img3rehover" :src="proline2" width="400" height="300">
+              </div>
+            </transition>
+          </div>
+        </router-link>
+        <router-link to="/Product-item3"><h3>LINE BOT</h3></router-link>
       </div>
     </div>
+    <imaging/>
   </div>
 </template>
 <script>
+import imaging from '../components/imaging.vue'
+
 export default {
+  components: {
+    imaging
+  },
   data () {
     return {
       prorock: require('../assets/rock.png'),
@@ -50,8 +65,10 @@ export default {
       protop: require('../assets/top.png'),
       protop2: require('../assets/protop2.jpg'),
       proline: require('../assets/line.jpg'),
+      proline2: require('../assets/linebot2.jpg'),
       imgif: true,
-      img2if: true
+      img2if: true,
+      img3if: true
     }
   },
   methods: {
@@ -66,6 +83,12 @@ export default {
     },
     img2rehover () {
       this.img2if = true
+    },
+    img3hover () {
+      this.img3if = false
+    },
+    img3rehover () {
+      this.img3if = true
     }
   }
 }
@@ -99,6 +122,7 @@ export default {
   margin:30px 80px;
   font-size:40px;
   padding-top:60px;
+  letter-spacing: 4px;
 }
 .pro-container{
   width:100%;
@@ -151,4 +175,30 @@ export default {
     opacity: 0;
 }
 
+@media screen and (max-width:480px) {
+  .pro-wrapper{
+    background-attachment:unset;
+  }
+  .pro-item{
+    width:100%;
+  }
+  .pro-item img {
+    width:340px;
+    height: 260px;
+  }
+  .imgchange{
+  position: relative;
+  width:340px;
+  height:260px;
+  margin:20px auto;
+}
+  .pro-title{
+  display: inline-block;
+  border-bottom:2px solid black;
+  margin:10px 0px;
+  font-size:30px;
+  padding-top:60px;
+  letter-spacing: 4px;
+}
+}
 </style>
