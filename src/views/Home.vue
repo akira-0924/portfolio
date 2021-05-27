@@ -69,6 +69,9 @@ border-radius: 50%;
 margin-top:80px;
 }
 @media screen and (max-width:900px) {
+  .profile-container{
+    background-attachment:unset;
+  }
   .pro-items2{
     width:90%;
     margin:20px 0px 0px 0px;
