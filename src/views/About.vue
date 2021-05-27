@@ -3,9 +3,9 @@
     <h1 class="ex-title">Hobby</h1>
     <p class="ho-title">中学1年生の頃にギターに出会い、高校では陸上部に所属しながらも、兼部で軽音楽部に入部。現在は趣味としてYoutubeに弾いてみた動画をアップロードしています。</p>
       <div class="slider">
-        <img src="http://img.youtube.com/vi/29Ai79iwd9g/mqdefault.jpg" class="you-img" width="500" height="340" alt="alt here..." />
-        <img src="http://img.youtube.com/vi/29Ai79iwd9g/mqdefault.jpg" class="you-img" width="500" height="340" alt="alt here..." />
-        <img src="http://img.youtube.com/vi/29Ai79iwd9g/mqdefault.jpg" class="you-img" width="500" height="340" alt="alt here..." />
+        <img :src="guitar1" class="you-img" width="500" height="340" alt="alt here..." />
+        <img :src="guitar2" class="you-img" width="500" height="340" alt="alt here..." />
+        <img :src="guitar3" class="you-img" width="500" height="340" alt="alt here..." />
       </div>
       <div class="you-item">
         <div class="you-items">
@@ -33,7 +33,10 @@ export default {
   data () {
     return {
       guitarimg: require('../assets/guitar.jpg'),
-      url: 'https://www.youtube.com/channel/UCDS_2MtKUP7h4vDS2tUVKIg'
+      url: 'https://www.youtube.com/channel/UCDS_2MtKUP7h4vDS2tUVKIg',
+      guitar1: require('../assets/guitar1.png'),
+      guitar2: require('../assets/guitar2.png'),
+      guitar3: require('../assets/guitar3.png')
     }
   }
 }
@@ -61,10 +64,18 @@ position: relative;
   left:0;
   background-color: rgba(255, 255, 255, 0.6);
 }
+.ex-title{
+  display: inline-block;
+  border-bottom:2px solid black;
+  margin:30px 80px;
+  font-size:40px;
+  padding-top:60px;
+  letter-spacing: 4px;
+}
 .you-img{
   border-radius: 10px;
-  margin:10px 0;
-  box-shadow: 0px 3px 4px rgb(172, 172, 172);
+  margin:0px 10px;
+  scroll-snap-align: center;
 }
 .ho-title{
   width:70%;
@@ -109,24 +120,12 @@ margin-left:16px;
 .slider{
   width:500px;
   white-space: nowrap;
-  overflow:hidden;
-  margin:0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin:20px auto;
   position:relative;
-}
-.slider::before{
-  content:'';
-  width:50px;
-  height: 50px;
-  background-color: rgb(167, 167, 167) ;
-  border-radius: 50%;
-  position: absolute;
-  left:10px;
-  top:42%;
-  z-index:1;
-  cursor: pointer;
-}
-.slider:active .you-img{
-  transform: translateX(-100px);
+  border-radius: 10px;
+  box-shadow: 0px 3px 4px rgb(172, 172, 172);
 }
 .hooper-slide {
     background-color: #62caaa;
@@ -143,6 +142,19 @@ margin-left:16px;
   .you-img{
     width:400px;
     height:300px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .about-container{
+  background-attachment:unset;
+  }
+  .you-img{
+    width:320px;
+    height:260px;
+  }
+  .slider{
+  width:90%;
   }
 }
 </style>
