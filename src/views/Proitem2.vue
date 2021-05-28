@@ -2,15 +2,20 @@
   <div class="port-container">
     <h1 class="detail-title">Product detail</h1>
     <div class="port-title">
-      <img :src="portfigma" class="rock-img1" width="900" height="600">
+      <scrollfade>
+        <img :src="portfigma" class="rock-img1" width="900" height="600">
+      </scrollfade>
     </div>
-    <div class="dis-container">
-      <h2>ポートフォリオ(このサイト)です</h2>
-      <p>【使用言語・ツール】</p>
-        <span class="discription">Figma / HTML5,CSS3 / Vue.js</span>
-        <p>【制作期間】</p>
-        <span class="discription">2021年 5月</span>
+    <scrollfade4>
+      <div class="dis-container">
+        <h2>ポートフォリオ(このサイト)です</h2>
+        <p>【使用言語・ツール】</p>
+          <span class="discription">Figma / HTML5,CSS3 / Vue.js</span>
+          <p>【制作期間】</p>
+          <span class="discription">2021年 5月</span>
       </div>
+    </scrollfade4>
+    <scrollfade4>
       <a :href="git2" class="rockto">
           <div class="btn">
             gitHub<i class="fas fa-angle-right"></i>
@@ -21,10 +26,18 @@
             Figma<i class="fas fa-angle-right"></i>
           </div>
       </a>
+    </scrollfade4>
   </div>
 </template>
 <script>
+import scrollfade from '../components/FadeInComponent.vue'
+import scrollfade4 from '../components/FadeInComponent4.vue'
+
 export default {
+  components: {
+    scrollfade,
+    scrollfade4
+  },
   data () {
     return {
       portfigma: require('../assets/portfigma.png'),
