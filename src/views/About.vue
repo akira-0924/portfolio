@@ -1,34 +1,46 @@
 <template>
   <div class="about-container">
-    <h1 class="ex-title">Hobby</h1>
-    <p class="ho-title">中学1年生の頃にギターに出会い、高校では陸上部に所属しながらも、兼部で軽音楽部に入部。現在は趣味としてYoutubeに弾いてみた動画をアップロードしています。</p>
-      <div class="slider">
-        <img :src="guitar1" class="you-img" width="500" height="340" alt="alt here..." />
-        <img :src="guitar2" class="you-img" width="500" height="340" alt="alt here..." />
-        <img :src="guitar3" class="you-img" width="500" height="340" alt="alt here..." />
-      </div>
-      <div class="you-item">
-        <div class="you-items">
-          <p>【機材】</p>
-          behringer/U-PHORIA<br>
-          ZOOM G3 Version 2.0
+    <scrollfade4>
+      <h1 class="ex-title">Hobby</h1>
+      <p class="ho-title">中学1年生の頃にギターに出会い、高校では陸上部に所属しながらも、兼部で軽音楽部に入部。現在は趣味としてYoutubeに弾いてみた動画をアップロードしています。</p>
+    </scrollfade4>
+      <scrollfade>
+        <div class="slider">
+          <img :src="guitar1" class="you-img" width="500" height="340" alt="alt here..." />
+          <img :src="guitar2" class="you-img" width="500" height="340" alt="alt here..." />
+          <img :src="guitar3" class="you-img" width="500" height="340" alt="alt here..." />
         </div>
-        <div class="you-items">
-          <p>【編集ツール】</p>
-          iMovie,GarageBand
+      </scrollfade>
+      <scrollfade4>
+        <div class="you-item">
+          <div class="you-items">
+            <p>【機材】</p>
+            behringer/U-PHORIA<br>
+            ZOOM G3 Version 2.0
+          </div>
+          <div class="you-items">
+            <p>【編集ツール】</p>
+            iMovie,GarageBand
+          </div>
         </div>
-      </div>
-      <br><h2 class="ab-btn"><a :href="url" class="my-youtube">YouTube<i class="fas fa-angle-right"></i></a></h2>
-    <contact/>
+        <br><h2 class="ab-btn"><a :href="url" class="my-youtube">YouTube<i class="fas fa-angle-right"></i></a></h2>
+      </scrollfade4>
+      <scrollfade>
+        <contact/>
+      </scrollfade>
   </div>
 </template>
 <script>
 import contact from '../components/contact.vue'
+import scrollfade from '../components/FadeInComponent.vue'
+import scrollfade4 from '../components/FadeInComponent4.vue'
 
 export default {
   name: 'App',
   components: {
-    contact
+    contact,
+    scrollfade,
+    scrollfade4
   },
   data () {
     return {
