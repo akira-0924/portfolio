@@ -4,72 +4,92 @@
     <div class="ex-container">
       <div class="ex-items">
         <scrollfade>
-        <img :src="eximguni" width="420" height="310">
+          <img :src="eximguni" width="420" height="310">
         </scrollfade>
       </div>
       <div class="ex-items-dis">
-        <h2>日本大学/理工学部/電気工学科</h2>
-        <p><span class="uni-tema">【講義】</span><br>電気工学科に所属し、電力、半導体、電気・電子回路、情報工学、コンピュータシミュレーションなどを履修しました。</p>
-        <p><span class="uni-tema">【研究】</span><br>星野研究室に所属しています。研究テーマは、“<span class="kenkyu">変形サイコロ(サイドタ)の解析</span>”です。数学における確率の学習を、より分かりやすく、正しく理解してもらうために変形サイコロを用いたシミュレーションによる解析を行っています。</p>
+        <scrollfade4>
+          <h2>日本大学/理工学部/電気工学科</h2>
+          <p><span class="uni-tema">【講義】</span><br>電気工学科に所属し、電力、半導体、電気・電子回路、情報工学、コンピュータシミュレーションなどを履修しました。</p>
+          <p><span class="uni-tema">【研究】</span><br>星野研究室に所属しています。研究テーマは、“<span class="kenkyu">変形サイコロ(サイドタ)の解析</span>”です。数学における確率の学習を、より分かりやすく、正しく理解してもらうために変形サイコロを用いたシミュレーションによる解析を行っています。</p>
+        </scrollfade4>
       </div>
     </div>
-    <h2 class="ex-title">Programming</h2>
-    <p class="ex-pro">知識、技術0の状態からprogateでHTML/CSSをやり込む。その後、GeekSalon(プログラミングスクール)にweb39期生として入校し、ロック診断サイトを制作。見事最終発表で優勝いたしました。</p>
-    <h2 class="skills-title"><i class="fas fa-caret-right"></i>フロントエンド</h2>
+    <scrollfade4>
+      <h2 class="ex-title">Programming</h2>
+      <p class="ex-pro">知識、技術0の状態からprogateでHTML/CSSをやり込む。その後、GeekSalon(プログラミングスクール)にweb39期生として入校し、ロック診断サイトを制作。見事最終発表で優勝いたしました。</p>
+    </scrollfade4>
+    <scrollfade2>
+      <h2 class="skills-title"><i class="fas fa-caret-right"></i>フロントエンド</h2>
+    </scrollfade2>
       <div class="skills">
         <ul>
           <scrollfade>
-          <li class="pro-list mou" v-for="skill in skills1" v-bind:key="skill.id">{{ skill.skill }}</li>
-          <li class="pro-list mada">React<span>(学修中)</span></li>
+            <li class="pro-list mou" v-for="skill in skills1" v-bind:key="skill.id">{{ skill.skill }}</li>
+            <li class="pro-list mada">React<span>(学修中)</span></li>
           </scrollfade>
         </ul>
       </div>
-      <h2 class="skills-title"><i class="fas fa-caret-right"></i>バックエンド</h2>
+      <scrollfade2>
+        <h2 class="skills-title"><i class="fas fa-caret-right"></i>バックエンド</h2>
+      </scrollfade2>
       <div class="skills">
         <ul>
           <scrollfade>
-          <li class="pro-list mou">Rails</li>
+            <li class="pro-list mou">Rails</li>
           </scrollfade>
         </ul>
       </div>
-      <h2 class="skills-title"><i class="fas fa-caret-right"></i>インフラ・サーバー</h2>
+      <scrollfade2>
+        <h2 class="skills-title"><i class="fas fa-caret-right"></i>インフラ・サーバー</h2>
+      </scrollfade2>
       <div class="skills">
         <ul>
           <scrollfade>
-          <li class="pro-list mada">AWS<span>(学修予定)</span></li>
-          <li class="pro-list mada">Docker<span>(学修中)</span></li>
+            <li class="pro-list mada">AWS<span>(学修予定)</span></li>
+            <li class="pro-list mada">Docker<span>(学修中)</span></li>
           </scrollfade>
         </ul>
       </div>
-      <h2 class="skills-title"><i class="fas fa-caret-right"></i>データベース</h2>
+      <scrollfade2>
+        <h2 class="skills-title"><i class="fas fa-caret-right"></i>データベース</h2>
+      </scrollfade2>
       <div class="skills">
         <ul>
           <scrollfade>
-          <li class="pro-list mou">SQLite3</li>
-          <li class="pro-list mada">MySQL<span>(学修予定)</span></li>
+            <li class="pro-list mou">SQLite3</li>
+            <li class="pro-list mada">MySQL<span>(学修予定)</span></li>
           </scrollfade>
         </ul>
       </div>
-      <h2 class="skills-title"><i class="fas fa-caret-right"></i>その他</h2>
+      <scrollfade2>
+        <h2 class="skills-title"><i class="fas fa-caret-right"></i>その他</h2>
+      </scrollfade2>
       <div class="skills">
         <ul>
           <scrollfade>
-          <li class="pro-list mou" v-for="skill in skills2" v-bind:key="skill.id">{{ skill.skill }}</li>
+            <li class="pro-list mou" v-for="skill in skills2" v-bind:key="skill.id">{{ skill.skill }}</li>
           </scrollfade>
         </ul>
       </div>
+      <scrollfade4>
         <router-link to="/Product">
           <h2 class="btn" v-on:mouseover="btnhover" v-on:mouseleave="btnrehover">Product<i class="fas fa-angle-right"></i></h2>
         </router-link>
+      </scrollfade4>
   </div>
 </template>
 <script>
 import scrollfade from '../components/FadeInComponent.vue'
+import scrollfade2 from '../components/FadeInComponent2.vue'
+import scrollfade4 from '../components/FadeInComponent4.vue'
 
 export default {
   name: 'HelloWorld',
   components: {
-    scrollfade
+    scrollfade,
+    scrollfade2,
+    scrollfade4
   },
   data () {
     return {
