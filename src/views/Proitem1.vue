@@ -3,53 +3,77 @@
     <h1 class="detail-title">Product detail</h1>
     <div class="img-con">
       <img :src="rocktitle" class="rock-img1" width="600" height="360">
-      <br><span class="title">IntRock</span><span class="subtitle">あなたに合ったロックバンドを。</span>
-      <div class="dis-container">
-      <p>【使用言語・ツール】</p>
-        <span class="discription">Figma / HTML5,CSS3 / JavaScript(jQuery) / Ruby on Rails</span>
-        <p>【制作期間】</p>
-        <span class="discription">2021年 2月~5月</span>
-      </div>
-      <a :href="rockto" class="rockto">
-        <div class="btn">
-          実際のプロダクト<i class="fas fa-angle-right"></i>
+      <scrollfade2>
+        <br><span class="title">IntRock</span><span class="subtitle">あなたに合ったロックバンドを。</span>
+      </scrollfade2>
+      <scrollfade4>
+        <div class="dis-container">
+        <p>【使用言語・ツール】</p>
+          <span class="discription">Figma / HTML5,CSS3 / JavaScript(jQuery) / Ruby on Rails</span>
+          <p>【制作期間】</p>
+          <span class="discription">2021年 2月~5月</span>
         </div>
-      </a>
-      <h1 class="second-titie">ロックの良さをもっと知って欲しい...<br>診断形式のロックバンド紹介サービス</h1>
-        <p class="dis-items">GeekSalon web開発コースにて3ヶ月で制作しました。企画、デザイン、コーディングまで一貫してオリジナルで開発しました。</p>
-        <img :src="rock2" class="rock-img2" width="800" height="460">
+        <a :href="rockto" class="rockto">
+          <div class="btn">
+            実際のプロダクト<i class="fas fa-angle-right"></i>
+          </div>
+        </a>
+      </scrollfade4>
+      <scrollfade4>
+        <h1 class="second-titie">ロックの良さをもっと知って欲しい...<br>診断形式のロックバンド紹介サービス</h1>
+          <p class="dis-items">GeekSalon web開発コースにて3ヶ月で制作しました。企画、デザイン、コーディングまで一貫してオリジナルで開発しました。</p>
+      </scrollfade4>
+        <scrollfade>
+          <img :src="rock2" class="rock-img2" width="800" height="460">
+        </scrollfade>
+      <scrollfade4>
       <h1 class="third-titie"><i class="fas fa-check"></i>制作の背景</h1>
         <span class="discription">音楽鑑賞(ロック)が趣味である僕が、友人のロックバンドを勧めると聴いてはくれるものの、いまいち共感されない...なんてことが多々ありました。そこでその人の好きな音楽の傾向を掴み、その人にあったロックバンドを紹介することで好きになってくれるのではないか、と考えました。
-  このサービスはロックにあまり関心がない人、好きではない人に向けてその人にあったロックバンドを紹介するサービスです。</span>
+  このサービスはロックにあまり関心がない人、好きではない人に向けてその人にあったロックバンドを紹介するサービスです。</span></scrollfade4>
       <div class="third-block">
         <h1 class="third-titie"><i class="fas fa-check"></i>ポイント</h1>
         <div class="third-block" v-for="subtitle in subtitles" v-bind:key="subtitle.id">
-          <h3 class="third-subu">{{ subtitle.title }}</h3>
-          <p class="third-dis">{{ subtitle.disc }}</p>
+          <scrollfade2>
+            <h3 class="third-subu">{{ subtitle.title }}</h3>
+          </scrollfade2>
+          <scrollfade>
+            <p class="third-dis">{{ subtitle.disc }}</p>
+          </scrollfade>
         </div>
       </div>
-      <div class="btn-field">
-        <a :href="rockto" class="rockto">
-          <div class="btn">
-            Product<i class="fas fa-angle-right"></i>
-          </div>
-        </a>
-        <a :href="git1" class="rockto">
-          <div class="btn">
-            gitHub<i class="fas fa-angle-right"></i>
-          </div>
-        </a>
-        <a :href="figma1" class="rockto">
-          <div class="btn">
-            Figma<i class="fas fa-angle-right"></i>
-          </div>
-        </a>
-      </div>
+      <scrollfade4>
+        <div class="btn-field">
+          <a :href="rockto" class="rockto">
+            <div class="btn">
+              Product<i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+          <a :href="git1" class="rockto">
+            <div class="btn">
+              gitHub<i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+          <a :href="figma1" class="rockto">
+            <div class="btn">
+              Figma<i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+        </div>
+      </scrollfade4>
     </div>
   </div>
 </template>
 <script>
+import scrollfade from '../components/FadeInComponent.vue'
+import scrollfade2 from '../components/FadeInComponent2.vue'
+import scrollfade4 from '../components/FadeInComponent4.vue'
+
 export default {
+  components: {
+    scrollfade,
+    scrollfade2,
+    scrollfade4
+  },
   data () {
     return {
       rocktitle: require('../assets/rock1.png'),
@@ -220,4 +244,3 @@ color:rgb(77, 77, 77);
   color:rgb(50, 50, 50);
 }
 </style>
-
