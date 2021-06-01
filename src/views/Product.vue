@@ -1,6 +1,6 @@
 <template>
   <div class="pro-wrapper">
-    <h1 class="pro-title">My Production</h1>
+    <subtitle title='My Production' />
     <div class="pro-container">
       <div class="pro-item">
         <router-link to="/Product-item1">
@@ -53,10 +53,12 @@
 </template>
 <script>
 import imaging from '../components/imaging.vue'
+import subtitle from '../components/Subtitle.vue'
 
 export default {
   components: {
-    imaging
+    imaging,
+    subtitle
   },
   data () {
     return {
@@ -115,14 +117,6 @@ export default {
   top:0;
   left:0;
   background-color: rgba(255, 255, 255, 0.6);
-}
-.pro-title{
-  display: inline-block;
-  border-bottom:2px solid black;
-  margin:30px 80px;
-  font-size:40px;
-  padding-top:60px;
-  letter-spacing: 4px;
 }
 .pro-container{
   width:100%;
