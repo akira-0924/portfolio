@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
+      <subtitle title='Hobby'/>
     <scrollfade4>
-      <h1 class="ex-title">Hobby</h1>
       <p class="ho-title">中学1年生の頃にギターに出会い、高校では陸上部に所属しながらも、兼部で軽音楽部に入部。現在は趣味としてYoutubeに弾いてみた動画をアップロードしています。</p>
     </scrollfade4>
       <scrollfade>
@@ -34,13 +34,15 @@
 import contact from '../components/contact.vue'
 import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
+import subtitle from '../components/Subtitle.vue'
 
 export default {
   name: 'App',
   components: {
     contact,
     scrollfade,
-    scrollfade4
+    scrollfade4,
+    subtitle
   },
   data () {
     return {
@@ -75,14 +77,6 @@ position: relative;
   top:0;
   left:0;
   background-color: rgba(255, 255, 255, 0.6);
-}
-.ex-title{
-  display: inline-block;
-  border-bottom:2px solid black;
-  margin:30px 80px;
-  font-size:40px;
-  padding-top:60px;
-  letter-spacing: 4px;
 }
 .you-img{
   border-radius: 10px;
