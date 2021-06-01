@@ -1,6 +1,6 @@
 <template>
   <div class="Experience">
-    <h1 class="ex-title">University</h1>
+    <subtitle title='University'/>
     <div class="ex-container">
       <div class="ex-items">
         <scrollfade>
@@ -83,13 +83,15 @@
 import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade2 from '../components/FadeInComponent2.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
+import subtitle from '../components/Subtitle.vue'
 
 export default {
   name: 'HelloWorld',
   components: {
     scrollfade,
     scrollfade2,
-    scrollfade4
+    scrollfade4,
+    subtitle
   },
   data () {
     return {
@@ -133,14 +135,6 @@ export default {
   top:0;
   left:0;
   background-color: rgba(255, 255, 255, 0.6);
-}
-.ex-title{
-  display: inline-block;
-  border-bottom:2px solid black;
-  margin:30px 80px;
-  font-size:40px;
-  padding-top:60px;
-  letter-spacing: 4px;
 }
 
 .ex-items img{
