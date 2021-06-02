@@ -17,14 +17,10 @@
     </scrollfade4>
     <scrollfade4>
       <a :href="git2" class="rockto">
-          <div class="btn">
-            gitHub<i class="fas fa-angle-right"></i>
-          </div>
+          <btn link="gitHub" />
       </a>
       <a :href="figma2" class="rockto">
-          <div class="btn">
-            Figma<i class="fas fa-angle-right"></i>
-          </div>
+          <btn link="Figma" />
       </a>
     </scrollfade4>
   </div>
@@ -32,11 +28,13 @@
 <script>
 import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
+import btn from '../components/Btn.vue'
 
 export default {
   components: {
     scrollfade,
-    scrollfade4
+    scrollfade4,
+    btn
   },
   data () {
     return {
@@ -72,24 +70,6 @@ export default {
   top:0;
   left:0;
   background-color: rgba(255, 255, 255, 0.6);
-}
-.btn{
-  display: inline-block;
-  background-color: rgb(255, 224, 172);
-  padding:6px 10px 6px 20px;
-  font-size:30px;
-  border-radius: 20px;
-  box-shadow: 0px 3px 4px rgb(172, 172, 172);
-  margin:40px 20px 80px 20px;
-  cursor: pointer;
-  transition:all ease .3s;
-}
-.btn:hover{
-  letter-spacing: 2px;
-  background-color: rgb(254, 202, 112);
-}
-.fa-angle-right{
-  margin-left:16px;
 }
 .dis-container{
   width:70%;
