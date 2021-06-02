@@ -16,7 +16,7 @@
       </div>
     </div>
     <scrollfade4>
-      <h2 class="ex-title">Programming</h2>
+      <subtitle title='Programming'/>
       <p class="ex-pro">知識、技術0の状態からprogateでHTML/CSSをやり込む。その後、GeekSalon(プログラミングスクール)にweb39期生として入校し、ロック診断サイトを制作。見事最終発表で優勝いたしました。</p>
     </scrollfade4>
     <scrollfade2>
@@ -74,7 +74,7 @@
       </div>
       <scrollfade4>
         <router-link to="/Product">
-          <h2 class="btn" v-on:mouseover="btnhover" v-on:mouseleave="btnrehover">Product<i class="fas fa-angle-right"></i></h2>
+          <h2><btn link="Pruduct" /></h2>
         </router-link>
       </scrollfade4>
   </div>
@@ -84,6 +84,7 @@ import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade2 from '../components/FadeInComponent2.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
 import subtitle from '../components/Subtitle.vue'
+import btn from '../components/Btn.vue'
 
 export default {
   name: 'HelloWorld',
@@ -91,7 +92,8 @@ export default {
     scrollfade,
     scrollfade2,
     scrollfade4,
-    subtitle
+    subtitle,
+    btn
   },
   data () {
     return {
@@ -194,25 +196,6 @@ flex-wrap: wrap;
 }
 .mada{
   background-color: rgb(238, 238, 238);
-}
-.btn{
-  display: inline-block;
-  background-color: rgb(255, 224, 172);
-  padding:6px 10px 6px 20px;
-  font-size:34px;
-  border-radius: 20px;
-  box-shadow: 0px 3px 4px rgb(172, 172, 172);
-  margin:80px 0;
-  cursor: pointer;
-  color:black;
-  transition:all ease .3s;
-}
-.btn:hover{
-  letter-spacing: 2px;
-  background-color: rgb(255, 211, 136);
-}
-.fa-angle-right{
-margin-left:16px;
 }
 .fadeIn {
 transition: 1s;
