@@ -52,6 +52,7 @@
           </a>
         </div>
       </scrollfade4>
+      <retop/>
     </div>
   </div>
 </template>
@@ -60,13 +61,15 @@ import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade2 from '../components/FadeInComponent2.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
 import btn from '../components/Btn.vue'
+import retop from '../components/retop.vue'
 
 export default {
   components: {
     scrollfade,
     scrollfade2,
     scrollfade4,
-    btn
+    btn,
+    retop
   },
   data () {
     return {
@@ -112,7 +115,6 @@ export default {
   background-size: cover;
   background-attachment: fixed;
   background-repeat:no-repeat;
-  padding-bottom: 100px;
 }
 .img-con::before{
   content:'';
