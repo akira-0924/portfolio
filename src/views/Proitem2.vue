@@ -17,24 +17,27 @@
     </scrollfade4>
     <scrollfade4>
       <a :href="git2" class="rockto">
-          <btn link="gitHub" />
+        <btn link="gitHub" />
       </a>
       <a :href="figma2" class="rockto">
-          <btn link="Figma" />
+        <btn link="Figma" />
       </a>
     </scrollfade4>
+    <retop/>
   </div>
 </template>
 <script>
 import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
 import btn from '../components/Btn.vue'
+import retop from '../components/retop.vue'
 
 export default {
   components: {
     scrollfade,
     scrollfade4,
-    btn
+    btn,
+    retop
   },
   data () {
     return {
