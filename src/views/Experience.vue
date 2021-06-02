@@ -77,6 +77,7 @@
           <h2><btn link="Pruduct" /></h2>
         </router-link>
       </scrollfade4>
+      <retop/>
   </div>
 </template>
 <script>
@@ -85,6 +86,7 @@ import scrollfade2 from '../components/FadeInComponent2.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
 import subtitle from '../components/Subtitle.vue'
 import btn from '../components/Btn.vue'
+import retop from '../components/retop.vue'
 
 export default {
   name: 'HelloWorld',
@@ -93,7 +95,8 @@ export default {
     scrollfade2,
     scrollfade4,
     subtitle,
-    btn
+    btn,
+    retop
   },
   data () {
     return {
@@ -208,7 +211,6 @@ padding-bottom:100px;
 opacity: 1;
 transform: translate3d(0, 0, 0);
 }
-
 @media screen and (max-width:600px) {
   .ex-items-dis{
   width:80%;
