@@ -28,6 +28,7 @@
       <scrollfade>
         <contact/>
       </scrollfade>
+      <retop/>
   </div>
 </template>
 <script>
@@ -36,6 +37,7 @@ import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
 import subtitle from '../components/Subtitle.vue'
 import btn from '../components/Btn.vue'
+import retop from '../components/retop.vue'
 
 export default {
   name: 'App',
@@ -44,7 +46,8 @@ export default {
     scrollfade,
     scrollfade4,
     subtitle,
-    btn
+    btn,
+    retop
   },
   data () {
     return {
@@ -88,6 +91,24 @@ position: relative;
 .ho-title{
   width:70%;
   margin:0 auto;
+}
+.ab-btn{
+  display: inline-block;
+  background-color: rgb(255, 224, 172);
+  padding:6px 10px 6px 20px;
+  font-size:34px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 4px rgb(172, 172, 172);
+  margin:20px 0;
+  cursor: pointer;
+  transition:all ease .3s;
+}
+.ab-btn:hover{
+  letter-spacing: 2px;
+  background-color: rgb(255, 211, 136);
+}
+.fa-angle-right{
+margin-left:16px;
 }
 .my-youtube{
   text-decoration: none;
