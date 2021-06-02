@@ -14,9 +14,7 @@
           <span class="discription">2021年 2月~5月</span>
         </div>
         <a :href="rockto" class="rockto">
-          <div class="btn">
-            実際のプロダクト<i class="fas fa-angle-right"></i>
-          </div>
+          <btn link="実際のプロダクト" />
         </a>
       </scrollfade4>
       <scrollfade4>
@@ -44,19 +42,13 @@
       <scrollfade4>
         <div class="btn-field">
           <a :href="rockto" class="rockto">
-            <div class="btn">
-              Product<i class="fas fa-angle-right"></i>
-            </div>
+            <btn link="Pruduct" />
           </a>
           <a :href="git1" class="rockto">
-            <div class="btn">
-              gitHub<i class="fas fa-angle-right"></i>
-            </div>
+            <btn link="gitHub" />
           </a>
           <a :href="figma1" class="rockto">
-            <div class="btn">
-              Figma<i class="fas fa-angle-right"></i>
-            </div>
+            <btn link="Figma" />
           </a>
         </div>
       </scrollfade4>
@@ -67,12 +59,14 @@
 import scrollfade from '../components/FadeInComponent.vue'
 import scrollfade2 from '../components/FadeInComponent2.vue'
 import scrollfade4 from '../components/FadeInComponent4.vue'
+import btn from '../components/Btn.vue'
 
 export default {
   components: {
     scrollfade,
     scrollfade2,
-    scrollfade4
+    scrollfade4,
+    btn
   },
   data () {
     return {
@@ -158,24 +152,6 @@ export default {
   text-align: left;
 }
 
-.btn{
-  display: inline-block;
-  background-color: rgb(255, 224, 172);
-  padding:6px 10px 6px 20px;
-  font-size:30px;
-  border-radius: 20px;
-  box-shadow: 0px 3px 4px rgb(172, 172, 172);
-  margin:40px 20px 10px 20px;
-  cursor: pointer;
-  transition:all ease .3s;
-}
-.btn:hover{
-  letter-spacing: 2px;
-  background-color: rgb(254, 202, 112);
-}
-.fa-angle-right{
-margin-left:16px;
-}
 .dis-container{
   width:70%;
   margin:40px auto;
