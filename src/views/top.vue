@@ -73,7 +73,7 @@ export default {
   .smart-view{
     padding-top:160px;
     padding-right:100px;
-    animation:navfade ease 2.5s both 3.5s;
+    animation:iphonefade cubic-bezier(0.68,-0.55,0.27,1.55) .7s both 4s;
   }
 }
 
@@ -157,6 +157,16 @@ export default {
   }
   100%{
     opacity: 1;
+  }
+}
+@keyframes iphonefade {
+  0%{
+    opacity: 0;
+    transform: translateX(300px)
+  }
+  100%{
+    opacity: 1;
+    transform:  translateX(0px)
   }
 }
 @keyframes backfade {
