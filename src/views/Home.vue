@@ -6,15 +6,20 @@
       <h3>日本大学/理工学部/電気工学科</h3>
     </div>
     <div class="pro-items2">
-      <p>日本大学理工学部電気工学科4年。中学、高校は6年間陸上部長距離に所属。大学では電気・電力・電子・情報通信など幅広く学修しました。研究室では高校数学における“確率”の教育促進のために変形サイコロ(サイドタ)を用いたシミュレーションを行っています。<br>大学の講義、研究でJava,Cの基本を学修しプログラミングの面白さを実感。その後progateでHTML/CSSの基礎を学修し、2021年2月にプログラミングスクール(GeekSaon)に入校。web開発コース39期生として、ロックバンドの診断サイトを制作し、優勝いたしました。<br>現在はフロントエンドの開発に興味を持ち、Vue.js、Reactを学修しています。</p>
+      <p>日本大学理工学部電気工学科4年。中学、高校は6年間陸上部長距離に所属。大学では電気・電力・電子・情報通信など幅広く学修しました。研究室では高校数学における“確率”の教育促進のために変形サイコロ(サイドタ)を用いたシミュレーションを行っています。<br>大学の講義、研究でJava,Cの基本を学修しプログラミングの面白さを実感。その後progateでHTML/CSSの基礎を学修し、2021年2月にプログラミングスクール(GeekSalon)に入校。web開発コース39期生として、ロックバンドの診断サイトを制作し、優勝いたしました。<br>現在はフロントエンドの開発に興味を持ち、Vue.js、Reactを学修しています。</p>
     </div>
   </div>
+  <footer1/>
 </template>
 
 <script>
+import footer1 from '../components/footer.vue'
+
 export default {
   name: 'Home',
-
+  components: {
+    footer1
+  },
   data () {
     return {
       hoprofile: require('../assets/profile.png')
@@ -43,6 +48,7 @@ background-repeat:no-repeat;
 position: relative;
 z-index:1;
 padding-bottom:60px;
+padding-top:100px;
 }
 .profile-container::before{
   content:'';
@@ -68,6 +74,7 @@ line-height: 36px;
 border-radius: 50%;
 margin-top:80px;
 }
+
 @media screen and (max-width:900px) {
   .profile-container{
     background-attachment:unset;
